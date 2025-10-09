@@ -77,6 +77,6 @@ public static class PrimitiveTypes
 
         Console.WriteLine(a > b); // Output: True
         Console.WriteLine(a != b); // Output: True
-        Console.WriteLine(!(c > b || c == a)); //Output: False
+        Console.WriteLine(!(c > b || c == a)); // Output: False
     } 
 }
