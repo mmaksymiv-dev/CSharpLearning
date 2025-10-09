@@ -30,6 +30,7 @@ public static class PrimitiveTypes
         Console.WriteLine(character); // Output: A
         Console.WriteLine(firstName); // Output: Mykola
         Console.WriteLine(isWorking); // Output: false
+        Console.WriteLine(Pi); // Output: 3.14
 
         Console.WriteLine("{0} {1}", byte.MinValue, byte.MaxValue); // Output: 0 255
     }

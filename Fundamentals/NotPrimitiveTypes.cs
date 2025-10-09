@@ -2,10 +2,19 @@
 
 public static class NotPrimitiveTypes
 {
+
+    public static void Start()
+    {
+        Classes();
+        Arrays();
+        Strings();
+        Enums();
+    }
+
     public class Person
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public string? FirstName { get; set; }
+        public string? LastName { get; set; }
 
         public void Introduce()
         {
@@ -19,13 +28,6 @@ public static class NotPrimitiveTypes
         {
             return a + b;
         }
-    }
-
-    public static void Start()
-    {
-        Classes();
-        Arrays();
-        Strings();
     }
 
     /// <summary>
@@ -86,9 +88,33 @@ public static class NotPrimitiveTypes
 
         Console.WriteLine(myFyllName);  // Output: My name is Mykola Maksymiv
 
-        var names = new string[3] { "name1", "name2", "name3" }; 
+        var names = new string[3] { "name1", "name2", "name3" };
         var formattedNames = string.Join(", ", names);
 
         Console.WriteLine(formattedNames); // Output: name1, name2, name3
+    }
+
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegisteredAirMail = 2,
+        Express = 3,
+    }
+
+    /// <summary>
+    /// Enums
+    /// </summary>
+    private static void Enums()
+    {
+        var method = ShippingMethod.Express;
+        Console.WriteLine((int)method); //Output: 3
+
+        var methodId = 3;
+        Console.WriteLine((ShippingMethod)methodId); //Output: Express
+
+        var methodName = "Express";
+        var shippingMethod = (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
+
+        Console.WriteLine(shippingMethod); //Output: Express
     }
 }
