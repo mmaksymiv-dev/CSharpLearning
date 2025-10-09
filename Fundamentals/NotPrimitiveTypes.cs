@@ -25,6 +25,7 @@ public static class NotPrimitiveTypes
     {
         Classes();
         Arrays();
+        Strings();
     }
 
     /// <summary>
@@ -67,5 +68,27 @@ public static class NotPrimitiveTypes
         Console.WriteLine(names[0]); // Output: name1
         Console.WriteLine(names[1]); // Output: name2
         Console.WriteLine(names[2]); // Output: name3
+    }
+
+    /// <summary>
+    /// Strings
+    /// </summary>
+    private static void Strings()
+    {
+        var firstName = "Mykola";
+        var lastname = "Maksymiv";
+
+        var fullName = firstName + " " + lastname;
+
+        Console.WriteLine(fullName); // Output: Mykola Maksymiv
+
+        var myFyllName = string.Format("My name is {0} {1}", firstName, lastname);
+
+        Console.WriteLine(myFyllName);  // Output: My name is Mykola Maksymiv
+
+        var names = new string[3] { "name1", "name2", "name3" }; 
+        var formattedNames = string.Join(", ", names);
+
+        Console.WriteLine(formattedNames); // Output: name1, name2, name3
     }
 }
