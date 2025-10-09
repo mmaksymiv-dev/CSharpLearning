@@ -24,6 +24,7 @@ public static class NotPrimitiveTypes
     public static void Start()
     {
         Classes();
+        Arrays();
     }
 
     /// <summary>
@@ -40,5 +41,31 @@ public static class NotPrimitiveTypes
         var result = calculator.Add(1, 2);
 
         Console.WriteLine(result); // Output: 3
+    }
+
+    /// <summary>
+    /// Arrays
+    /// </summary>
+    private static void Arrays()
+    {
+        var numbers = new int[3];
+        numbers[0] = 1;
+
+        Console.WriteLine(numbers[0]); // Output: 1
+        Console.WriteLine(numbers[1]); // Output: 0
+        Console.WriteLine(numbers[2]); // Output: 0
+
+        var flags = new bool[3];
+        flags[0] = true;
+
+        Console.WriteLine(flags[0]); // Output: True
+        Console.WriteLine(flags[1]); // Output: False
+        Console.WriteLine(flags[2]); // Output: False
+
+        var names = new string[3] { "name1", "name2", "name3" };
+
+        Console.WriteLine(names[0]); // Output: name1
+        Console.WriteLine(names[1]); // Output: name2
+        Console.WriteLine(names[2]); // Output: name3
     }
 }
