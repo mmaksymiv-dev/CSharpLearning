@@ -6,6 +6,7 @@ public static class ControlFlow
     {
         IfElseAndSwitchCase();
         ForLoops();
+        ForeachLoops();
     }
 
     public enum Season
@@ -30,7 +31,7 @@ public static class ControlFlow
         else
             Console.WriteLine("It's evening.");
 
-        //Output: It's morning.
+        // Output: It's morning.
 
         bool isGoldCustomer = true;
 
@@ -44,7 +45,7 @@ public static class ControlFlow
 
         Console.WriteLine(price);
 
-        //Output: 19.95.
+        // Output: 19.95.
 
         var season = Season.Autumn;
 
@@ -59,19 +60,21 @@ public static class ControlFlow
                 break;
         }
 
-        //Output: We've got promotion
+        // Output: We've got promotion
     }
 
-    //For Loops
+    /// <summary>
+    /// For Loops
+    /// </summary>
     private static void ForLoops()
     {
-        for(var i = 1; i <= 10; i++)
+        for (var i = 1; i <= 10; i++)
         {
-            if(i%2 == 0)
+            if (i % 2 == 0)
                 Console.WriteLine(i);
         }
 
-        //Output: 2 4 6 8 10
+        // Output: 2 4 6 8 10
 
         for (var i = 10; i >= 1; i--)
         {
@@ -79,6 +82,22 @@ public static class ControlFlow
                 Console.WriteLine(i);
         }
 
-        //Output: 10 8 6 4 2
+        // Output: 10 8 6 4 2
+    }
+
+    /// <summary>
+    /// Foreach Loops
+    /// </summary>
+    private static void ForeachLoops()
+    {
+        var name = "Mykola Maksymiv";
+
+        foreach(var character in name)
+            Console.WriteLine(character); // Output : M y k o l a  M a k s y m i v
+
+        var numbers = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+
+        foreach(var number in numbers)
+            Console.WriteLine(number); // Output: 1 2 3 4 5 6 7
     }
 }
