@@ -8,6 +8,7 @@ public static class ControlFlow
         ForLoops();
         ForeachLoops();
         WhileLoops();
+        RandomClass();
     }
 
     public enum Season
@@ -120,5 +121,24 @@ public static class ControlFlow
 
             break;
         }
+    }
+
+    /// <summary>
+    /// Random Class
+    /// </summary>
+    private static void RandomClass()
+    {
+        var random = new Random();
+
+        const int passwordLength = 10;
+
+        var buffer = new char[passwordLength];
+
+        for (var i = 0; i < 10; i++)
+            buffer[i] = (char)('a' + random.Next(0, 26));
+
+        var password = new string(buffer);
+
+        Console.WriteLine(password);
     }
 }
