@@ -7,6 +7,7 @@ public static class ControlFlow
         IfElseAndSwitchCase();
         ForLoops();
         ForeachLoops();
+        WhileLoops();
     }
 
     public enum Season
@@ -92,12 +93,32 @@ public static class ControlFlow
     {
         var name = "Mykola Maksymiv";
 
-        foreach(var character in name)
+        foreach (var character in name)
             Console.WriteLine(character); // Output : M y k o l a  M a k s y m i v
 
         var numbers = new int[] { 1, 2, 3, 4, 5, 6, 7 };
 
-        foreach(var number in numbers)
+        foreach (var number in numbers)
             Console.WriteLine(number); // Output: 1 2 3 4 5 6 7
+    }
+
+    /// <summary>
+    /// While Loops
+    /// </summary>
+    private static void WhileLoops()
+    {
+        while (true)
+        {
+            Console.Write("Type your name: ");
+            var input = Console.ReadLine();
+
+            if (!String.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("@Echo: " + input);
+                continue;
+            }
+
+            break;
+        }
     }
 }
