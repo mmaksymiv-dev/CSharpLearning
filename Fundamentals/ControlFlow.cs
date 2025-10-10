@@ -5,6 +5,7 @@ public static class ControlFlow
     public static void Start()
     {
         IfElseAndSwitchCase();
+        ForLoops();
     }
 
     public enum Season
@@ -59,5 +60,25 @@ public static class ControlFlow
         }
 
         //Output: We've got promotion
+    }
+
+    //For Loops
+    private static void ForLoops()
+    {
+        for(var i = 1; i <= 10; i++)
+        {
+            if(i%2 == 0)
+                Console.WriteLine(i);
+        }
+
+        //Output: 2 4 6 8 10
+
+        for (var i = 10; i >= 1; i--)
+        {
+            if (i % 2 == 0)
+                Console.WriteLine(i);
+        }
+
+        //Output: 10 8 6 4 2
     }
 }
