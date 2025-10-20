@@ -5,3 +5,4 @@ NotPrimitiveTypes.Start();
 ControlFlow.Start();
 ArraysAndList.Start();
 WorkingWithDates.Start();
+WorkingWithText.Start();
