@@ -5,6 +5,7 @@ public static class WorkingWithText
     public static void Start()
     {
         Strings();
+        SummarisingText();
     }
 
     /// <summary>
@@ -38,5 +39,34 @@ public static class WorkingWithText
 
         float price = 20.95f;
         Console.WriteLine(price.ToString("C0"));
+    }
+
+    private static void SummarisingText()
+    {
+        var sentece = "This is going to be a really really really really long text";
+        var summary = SummerizeText(sentece, 25);
+        Console.WriteLine(summary);
+    }
+
+    private static string SummerizeText(string text, int maxLength = 20)
+    {
+        if (text.Length < maxLength)
+            return text;
+
+        var words = text.Split(" ");
+        var totalCharacters = 0;
+
+        var summaryWords = new List<string>();
+
+        foreach (var word in words)
+        {
+            summaryWords.Add(word);
+
+            totalCharacters += word.Length + 1;
+            if (totalCharacters > maxLength)
+                break;
+        }
+
+        return String.Join(" ", summaryWords) + "...";
     }
 }
