@@ -8,6 +8,9 @@ public static class ArraysAndList
         Lists();
     }
 
+    /// <summary>
+    /// Arrays();
+    /// </summary>
     private static void Arrays()
     {
         var numbers = new int[] { 3, 7, 9, 2, 14, 6 };
@@ -49,6 +52,9 @@ public static class ArraysAndList
             Console.WriteLine(n); // Output: 14 9 6 2 0 0
     }
 
+    /// <summary>
+    /// Lists
+    /// </summary>
     private static void Lists()
     {
         var numbers = new List<int>() { 1, 2, 3, 4 };

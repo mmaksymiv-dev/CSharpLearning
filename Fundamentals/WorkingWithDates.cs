@@ -5,9 +5,12 @@ public static class WorkingWithDates
     public static void Start()
     {
         Dates();
-        TimeStans();
+        TimeSpans();
     }
 
+    /// <summary>
+    /// Dates
+    /// </summary>
     private static void Dates()
     {
         var dateTime = new DateTime(2025, 1, 1);
@@ -24,7 +27,10 @@ public static class WorkingWithDates
         Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm"));
     }
 
-    private static void TimeStans()
+    /// <summary>
+    /// TimeSpans
+    /// </summary>
+    private static void TimeSpans()
     {
         var timeSpan = new TimeSpan(1, 2, 3);
 
@@ -48,7 +54,7 @@ public static class WorkingWithDates
         // ToString()
         Console.WriteLine("ToString:" + timeSpan.ToString());
 
-        //Parse
+        // Parse
         Console.WriteLine("Parse: " + TimeSpan.Parse("01:02:03"));
     }
 }
