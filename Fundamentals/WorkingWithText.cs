@@ -1,4 +1,6 @@
-﻿namespace Fundamentals;
+﻿using System.Text;
+
+namespace Fundamentals;
 
 public static class WorkingWithText
 {
@@ -6,6 +8,7 @@ public static class WorkingWithText
     {
         Strings();
         SummarisingText();
+        StringBuilder();
     }
 
     /// <summary>
@@ -68,5 +71,32 @@ public static class WorkingWithText
         }
 
         return String.Join(" ", summaryWords) + "...";
+    }
+
+    private static void StringBuilder()
+    {
+        var buider = new StringBuilder("Hello World");
+
+        //buider.Append('-', 10);
+        //buider.AppendLine();
+        //buider.Append("Header");
+        //buider.AppendLine();
+        //buider.Append('-', 10);
+
+        //buider.Replace('-', '+');
+        //buider.Remove(0, 10);
+        //buider.Insert(0, new string('-', 10));
+
+        buider.Append('-', 10)
+            .AppendLine()
+            .Append("Header")
+            .AppendLine()
+            .Append('-', 10)
+            .Replace('-', '+')
+            .Remove(0, 10)
+            .Insert(0, new string('-', 10));
+
+        Console.WriteLine(buider);
+        Console.WriteLine("First Char:" + buider[0]);
     }
 }
